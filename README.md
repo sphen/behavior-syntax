@@ -2,7 +2,7 @@
 
 A syntax theme based on the UI from Westworld.
 
-![](https://raw.github.com/sphen/behavior-syntax/master/screenshot.jpg)
+![screenshot](http://i.imgur.com/MKmQQQ5.jpg)
 
 ## Installation
 ### Via Atom
