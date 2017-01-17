@@ -1,0 +1,17 @@
+{
+  "name": "behavior-syntax",
+  "theme": "syntax",
+  "version": "0.0.0",
+  "description": "A dark syntax theme for Atom that uses Google's Material Design color palette",
+  "keywords": [
+    "syntax",
+    "theme",
+    "westworld",
+    "behavior"
+  ],
+  "repository": "https://github.com/sphen/behavior-syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.13.0 <2.0.0"
+  }
+}
