@@ -1,7 +1,7 @@
 @import "syntax-variables";
 
 atom-text-editor {
-    background-color: @syntax-background-color;
+    background-color: @background;
     color: @syntax-text-color;
 
     .wrap-guide {
@@ -89,7 +89,7 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
     }
 
     &.syntax--other.syntax--unit {
-        color: @teal;
+        color: @light-green;
     }
 }
 
@@ -99,7 +99,7 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
 }
 
 .syntax--constant {
-    color: @red;
+    color: @light-orange;
 
     &.syntax--character.syntax--escape {
         color: @cyan;
@@ -135,7 +135,7 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
 
     &.syntax--variable {
         &.syntax--object {
-            color: @light-blue;
+            color: @foreground;
         }
     }
 }
@@ -237,17 +237,10 @@ atom-text-editor .search-results .syntax--marker.current-result .region {
             color: @blue;
         }
     }
-    &.syntax--constant.syntax--font-name.syntax--css {
-        color: @very-light-gray;
-    }
-
-    &.syntax--constant.syntax--property-value.syntax--css {
-        color: @very-light-gray;
-}
 
     &.syntax--variable {
         &.syntax--dom {
-            color: @teal;
+            color: @light-green;
         }
     }
 }
@@ -400,8 +393,148 @@ atom-text-editor {
 }
 
 .bracket-matcher .region {
-    border-bottom: 1px solid @syntax-cursor-color;
+    border-bottom: 1px solid @red;
     box-sizing: border-box;
     background-color: fade(@syntax-text-color, 10%);
-    box-shadow: inset 0 -1px 0 @syntax-cursor-color;
+    box-shadow: inset 0 -1px 0 @red;
+}
+
+// HTML
+.syntax--html {
+    .syntax--meta {
+        &.syntax--tag {
+            &.syntax--doctype {
+                color: @purple;
+            }
+        }
+    }
+}
+
+// JS
+
+.syntax--js {
+    .syntax--variable {
+        &.syntax--property {
+            color: @very-light-gray;
+        }
+    }
+    .syntax--constant.syntax--language {
+    color: @red;
+  }
+}
+
+// JSON
+
+.syntax--json {
+    .syntax--meta {
+        &.syntax--array.syntax--structure .syntax--string.syntax--quoted.syntax--double {
+            color: @green;
+
+            > * {
+                color: currentColor;
+
+                &.syntax--punctuation {
+                    &.syntax--begin, &.syntax--end {
+                        color: @very-light-gray;
+                    }
+                }
+            }
+        }
+
+        .syntax--punctuation.syntax--separator.syntax--key-value + .syntax--string.syntax--quoted {
+            color: @green;
+
+            * {
+                color: currentColor;
+
+                &.syntax--punctuation {
+                    &.syntax--begin, &.syntax--end {
+                        color: @very-light-gray;
+                    }
+                }
+            }
+        }
+
+        &.syntax--structure.syntax--dictionary .syntax--string.syntax--quoted {
+            color: @purple;
+
+            .syntax--punctuation.syntax--string {
+                color: currentColor;
+            }
+        }
+    }
+}
+
+// CSS
+
+.syntax--support.syntax--constant.syntax--font-name.syntax--css {
+    color: @very-light-gray;
+}
+
+.syntax--support.syntax--constant.syntax--property-value.syntax--css {
+    color: @very-light-gray;
+}
+
+// Ruby
+
+.syntax--ruby {
+    .syntax--punctuation {
+        &.syntax--separator {
+            color: @cyan;
+        }
+    }
+
+    .syntax--variable {
+        &.syntax--block {
+            color: @red;
+        }
+    }
+}
+
+// Python
+
+.syntax--python {
+    .syntax--meta {
+        &.syntax--function-call {
+            color: @blue;
+
+            .syntax--punctuation {
+                color: @cyan;
+            }
+
+            .syntax--arguments {
+                color: @indigo;
+
+                &.syntax--punctuation {
+                    color: @cyan;
+                }
+            }
+        }
+    }
+
+    .syntax--variable {
+        &.syntax--self {
+            color: @pink;
+        }
+    }
+
+    .syntax--meta {
+        .syntax--punctuation {
+            &.syntax--inheritance, &.syntax--section {
+                color: @cyan;
+            }
+        }
+    }
+
+    .syntax--variable {
+        &.syntax--parameter {
+            color: @cyan;
+        }
+    }
+
+    .syntax--keyword {
+        &.syntax--operator {
+            color: @purple;
+        }
+    }
 }
