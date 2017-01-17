@@ -1,8 +1,8 @@
 # behavior-syntax theme
 
-A syntax theme based on the UI from Westworld.
+A syntax theme based on the Behavioral Tablets from HBO's 'Westworld'.
 
-![screenshot](http://i.imgur.com/MKmQQQ5.jpg)
+![screenshot](http://i.imgur.com/PLUi2gg.png)
 
 ## Installation
 ### Via Atom

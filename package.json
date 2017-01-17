@@ -2,7 +2,7 @@
   "name": "behavior-syntax",
   "theme": "syntax",
   "version": "0.1.3",
-  "description": "A dark syntax theme for Atom that uses Google's Material Design color palette",
+  "description": "A syntax theme for Atom based on the Tablet UI from HBO's 'Westworld'",
   "keywords": [
     "syntax",
     "theme",
