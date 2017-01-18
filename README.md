@@ -1,6 +1,6 @@
 # behavior-syntax theme
 
-A syntax theme based on the Behavioral Tablets from HBO's 'Westworld'.
+A syntax theme based on the Behavioral Tablet UI from HBO's 'Westworld'.
 
 ![screenshot](http://i.imgur.com/PLUi2gg.png)
 
